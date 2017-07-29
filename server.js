@@ -6,6 +6,7 @@ var path = require("path");
 var port = 3000;
 
 var app = express();
+app.set("port", (process.env.PORT || 3000));
 
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
